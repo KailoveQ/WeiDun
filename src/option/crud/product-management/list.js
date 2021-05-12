@@ -51,10 +51,10 @@ export default () => {
       {
         label: "产品分类",
         prop: "typeId",
-        // hide: true,
+        hide: true,
         value:　1,
-        // addDisplay: false,
-        // editDisplay: false
+        addDisplay: false,
+        editDisplay: false
       },
       {
         label: "状态",
