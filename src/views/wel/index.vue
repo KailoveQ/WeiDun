@@ -1,104 +1,76 @@
 <template>
-  <basic-container>
-    <el-row>
-      <el-col :span="12">
-        <div class="grid-content bg-purple">
-          我是内容一
+  <div class="index-p">
+    <div
+        class="order-count"
+        :style="{ height: orderCountHieght, fontSize: orderCountFontSize }"
+    >
+      <div class="item" :style="{ padding: orderCountPadding }">
+        <div class="count">
+          <avue-count-up :end="222" />
         </div>
-      </el-col>
-      <el-col :span="12">
-        <div class="grid-content bg-purple-light">
-          我是内容二
+      </div>
+      <div class="item" :style="{ padding: orderCountPadding }">
+        <div class="count">
+          <avue-count-up :end="222" />
         </div>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="12">
-        <div class="grid-content bg-purple">
-          <el-button type="primary" @click="option.switchTheme=!option.switchTheme" size="small">{{option.switchTheme?'关闭主题':'打开主题'}}</el-button>
-          <el-button @click="theme='macarons'" size="small">换紫色主题</el-button>
-          <el-button @click="theme='wonderland'" size="small">换绿色主题</el-button>
-          <avue-echart-pie :theme="theme" :option="option" :data="data" width="1000"></avue-echart-pie>
+      </div>
+      <div class="item" :style="{ padding: orderCountPadding }">
+        <div class="count">
+          <avue-count-up :end="222" />
         </div>
-      </el-col>
-      <el-col :span="12">
-        <div class="grid-content bg-purple-light">
-          我是内容四
+      </div>
+      <div class="item" :style="{ padding: orderCountPadding }">
+        <div class="count">
+          <avue-count-up :end="222" />
         </div>
-      </el-col>
-    </el-row>
-  </basic-container>
+      </div>
+      <div class="item" :style="{ padding: orderCountPadding }">
+        <div class="count">
+          <avue-count-up :end="222" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
 <script>
-
-
+const orderCountItemWidth = (document.body.scrollWidth - 400) / 5;
 export default {
-  data() {
-    return {
-      theme:'',
-      data: [
-        { value: 335, name: '直接访问' },
-        { value: 310, name: '邮件营销' },
-        { value: 234, name: '联盟广告' },
-        { value: 135, name: '视频广告' },
-        { value: 1548, name: '搜索引擎' }
-      ],
-      option: {
-        switchTheme:true,
-        width: '100%',
-        height: 600,
-        title: '手机大比拼',
-        subtitle: '纯属虚构',
-        labelShow:true,
-        radius: true,
-        "barColor": [
-          {
-            "color1": "#83bff6",
-          },
-          {
-            "color1": "#23B7E5",
-          },
-          {
-            "color1": "rgba(154, 168, 212, 1)",
-          },
-          {
-            "color1": "#188df0",
-          },
-          {
-            "color1": "#564AA3",
-          }
-        ]
-      },
-    }
-  }
-}
+  computed: {
+    orderCountHieght() {
+      return `${orderCountItemWidth * 0.613}px`;
+    },
+    orderCountFontSize() {
+      return `${orderCountItemWidth * 0.1485}px`;
+    },
+    orderCountPadding() {
+      return `${orderCountItemWidth * 0.3432}px 0 0 ${
+          orderCountItemWidth * 0.1386
+      }px`;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.el-row {
-  margin-bottom: 20px;
-  &:last-child {
-    margin-bottom: 0;
+@import "~@/styles/mixin.scss";
+.index-p {
+  padding: 0 30px;
+  .order-count {
+    display: flex;
+    .item {
+      flex: 1;
+      margin: 0 10rpx;
+      @include bgSettings();
+      background-image: url("/img/index/index-count-bg-00.png");
+      background-position: center top;
+      .count {
+        // font-size: 45px;
+        font-family: DIN;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    }
   }
-}
-.el-col {
-  border-radius: 4px;
-}
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.bg-purple-light {
-  background: #e5e9f2;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
 }
 </style>
