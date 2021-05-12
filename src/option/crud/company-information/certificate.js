@@ -84,7 +84,7 @@ export default () => {
         label: "修改时间",
         prop: "updateTime",
         addDisplay: true,
-        // editDisplay: true,
+        editDisplay: true,
         // hide: false
       },
     ],

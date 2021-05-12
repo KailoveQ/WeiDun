@@ -51,9 +51,11 @@ export default () => {
       {
         label: "新闻分类",
         prop: "typeId",
-        hide: false,
+        hide: true,
         value:　1,
         row: true,
+        addDisplay: false,
+        editDisplay: false
       },
       {
         label: "新闻分类名称",
@@ -61,7 +63,8 @@ export default () => {
         row: true,
         hide: true,
         value:　1,
-        addDisplay: false
+        addDisplay: false,
+        editDisplay: false
       },
       {
         label: "状态",
@@ -102,24 +105,16 @@ export default () => {
       {
         label: "新闻介绍",
         prop: "detail",
-        type: 'textarea',
+        type: 'ueditor',
         hide: true,
-        row: true,
         span: 24,
-        options: {
-          action: baseUrl + "/upload/",
-          props: {
-            res:'data',
-            url: "absolutePath"
+        rules: [
+          {
+            required: true,
+            message: "请输入新闻介绍",
+            trigger: "blur",
           },
-        },
-        // rules: [
-        //   {
-        //     required: true,
-        //     message: "请输入岗位详情",
-        //     trigger: "blur",
-        //   },
-        // ]
+        ]
       }
     ],
   }

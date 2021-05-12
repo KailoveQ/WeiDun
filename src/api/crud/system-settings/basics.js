@@ -11,5 +11,7 @@ export const getdate = (data) => {
 export const update = (data) => request({
   url: `${apiUrl}/1`,
   method: 'patch',
-  data: data
+  data: {
+    ...data,id:1
+  }
 })

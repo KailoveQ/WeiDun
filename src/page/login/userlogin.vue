@@ -29,41 +29,41 @@
            class="icon-mima"></i>
       </el-input>
     </el-form-item>
-    <el-form-item prop="code">
-      <el-row :span="24">
-        <el-col :span="16">
-          <el-input size="small"
-                    @keyup.enter.native="handleLogin"
-                    :maxlength="code.len"
-                    v-model="loginForm.code"
-                    auto-complete="off"
-                    :placeholder="$t('login.code')">
-            <i slot="prefix"
-               class="icon-yanzhengma"></i>
-          </el-input>
-        </el-col>
-        <el-col :span="8">
-          <div class="login-code">
-            <span class="login-code-img"
-                  @click="refreshCode"
-                  v-if="code.type == 'text'">{{code.value}}</span>
-            <img :src="code.src"
-                 class="login-code-img"
-                 @click="refreshCode"
-                 v-else />
-            <!-- <i class="icon-shuaxin login-code-icon" @click="refreshCode"></i> -->
-          </div>
-        </el-col>
-      </el-row>
+<!--    <el-form-item prop="code">-->
+<!--      <el-row :span="24">-->
+<!--        <el-col :span="16">-->
+<!--          <el-input size="small"-->
+<!--                    @keyup.enter.native="handleLogin"-->
+<!--                    :maxlength="code.len"-->
+<!--                    v-model="loginForm.code"-->
+<!--                    auto-complete="off"-->
+<!--                    :placeholder="$t('login.code')">-->
+<!--            <i slot="prefix"-->
+<!--               class="icon-yanzhengma"></i>-->
+<!--          </el-input>-->
+<!--        </el-col>-->
+<!--        <el-col :span="8">-->
+<!--          <div class="login-code">-->
+<!--            <span class="login-code-img"-->
+<!--                  @click="refreshCode"-->
+<!--                  v-if="code.type == 'text'">{{code.value}}</span>-->
+<!--            <img :src="code.src"-->
+<!--                 class="login-code-img"-->
+<!--                 @click="refreshCode"-->
+<!--                 v-else />-->
+<!--            &lt;!&ndash; <i class="icon-shuaxin login-code-icon" @click="refreshCode"></i> &ndash;&gt;-->
+<!--          </div>-->
+<!--        </el-col>-->
+<!--      </el-row>-->
 
-    </el-form-item>
+<!--    </el-form-item>-->
 
-    <el-form-item>
+<!--    <el-form-item>-->
       <el-button type="primary"
                  size="small"
                  @click.native.prevent="handleLogin"
                  class="login-submit">{{$t('login.submit')}}</el-button>
-    </el-form-item>
+<!--    </el-form-item>-->
   </el-form>
 </template>
 
@@ -84,8 +84,8 @@ export default {
     };
     return {
       loginForm: {
-        username: "admin",
-        password: "123456",
+        username: "",
+        password: "",
         code: "",
         redomStr: ""
       },

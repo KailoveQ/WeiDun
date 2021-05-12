@@ -39,13 +39,7 @@ export default {
         border: true,
         stripe: true,
         column: [
-          {
-            label: "公司id",
-            prop: "id",
-            hide: "true",
-            row: true,
-            value: "1"
-          },
+
           {
             label: "公司名称",
             prop: "name",
@@ -59,30 +53,37 @@ export default {
             ],
           },
           {
-            label: "联系电话",
+            label: "联系方式一",
             prop: "phone",
             row: true,
-            value: '我是电话号码',
+            value: '我是电话号码1',
             // type: "string",
-            rules: [
-              {
-                required: true,
-                message: "请输入 联系电话",
-                trigger: "blur",
-              },
-            ],
+            // rules: [
+            //   {
+            //     required: true,
+            //     message: "请输入 联系电话",
+            //     trigger: "blur",
+            //   },
+            // ],
+          },
+          {
+            label: "联系方式二",
+            prop: "mobile",
+            row: true,
+            value: '我是电话号码2',
+            // type: "string",
           },
           {
             label: "邮箱",
             prop: "email",
             row: true,
-            rules: [
-              {
-                required: true,
-                message: "请输入 邮箱",
-                trigger: "blur",
-              },
-            ],
+            // rules: [
+            //   {
+            //     required: true,
+            //     message: "请输入 邮箱",
+            //     trigger: "blur",
+            //   },
+            // ],
           },
           {
             label: "地址",

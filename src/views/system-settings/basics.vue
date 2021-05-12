@@ -39,22 +39,15 @@ export default {
         border: true,
         stripe: true,
         column: [
-          {
-            label: "网站id",
-            prop: "id",
-            hide: true,
-            type: "number",
-            value: 1,
-            row: true,
-            disabled: true,
-            rules: [
-              {
-                required: true,
-                message: "请输入网站id",
-                trigger: "blur",
-              },
-            ],
-          },
+          // {
+          //   label: "网站id",
+          //   prop: "id",
+          //   hide: true,
+          //   type: "number",
+          //   value: 1,
+          //   row: true,
+          //   disabled: true,
+          // },
           {
             label: "网站logo",
             prop: "logo",
@@ -69,6 +62,19 @@ export default {
               res: 'data',
               url:'absolutePath'
             },
+            rules: [
+              {
+                required: true,
+                message: "请上传图片",
+                trigger: "blur",
+              },
+            ]
+          },
+          {
+
+            label: "网站名称",
+            prop: "name",
+            row: true,
             rules: [
               {
                 required: true,
@@ -139,18 +145,11 @@ export default {
               },
             ],
           },
-          {
-            label: "qq 客服",
-            prop: "qq",
-            row: true,
-            rules: [
-              {
-                required: true,
-                message: "请输入 qq 客服",
-                trigger: "blur",
-              },
-            ],
-          },
+          // {
+          //   label: "qq 客服",
+          //   prop: "qq",
+          //   row: true,
+          // },
           {
             label: "联系电话",
             prop: "phone",

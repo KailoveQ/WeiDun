@@ -1,6 +1,6 @@
 export default {
   tip: '提示',
-  title: '车融易管理后台',
+  title: '微盾管理后台',
   logoutTip: '退出系统, 是否继续?',
   submitText: '确定',
   cancelText: '取消',
@@ -74,7 +74,7 @@ export default {
   },
   login: {
     title: '登录 ',
-    info: '车融易管理后台',
+    info: '微盾管理后台',
     username: '请输入账号',
     password: '请输入密码',
     wechat: '微信',

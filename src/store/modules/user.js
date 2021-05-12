@@ -173,20 +173,30 @@ const user = {
     // 登出
     LogOut({ commit }) {
       return new Promise((resolve, reject) => {
-        logout().then(() => {
-          commit('SET_TOKEN', '')
-          commit('SET_MENUID', {})
-          commit('SET_MENUALL', []);
-          commit('SET_MENU', [])
-          commit('SET_TAG_LIST', [])
-          commit('SET_ROLES', [])
-          commit('DEL_ALL_TAG');
-          commit('CLEAR_LOCK');
-          removeToken()
-          resolve()
-        }).catch(error => {
-          reject(error)
-        })
+        commit('SET_TOKEN', '')
+        commit('SET_MENUID', {})
+        commit('SET_MENUALL', []);
+        commit('SET_MENU', [])
+        commit('SET_TAG_LIST', [])
+        commit('SET_ROLES', [])
+        commit('DEL_ALL_TAG');
+        commit('CLEAR_LOCK');
+        removeToken()
+        resolve()
+        // logout().then(() => {
+        //   commit('SET_TOKEN', '')
+        //   commit('SET_MENUID', {})
+        //   commit('SET_MENUALL', []);
+        //   commit('SET_MENU', [])
+        //   commit('SET_TAG_LIST', [])
+        //   commit('SET_ROLES', [])
+        //   commit('DEL_ALL_TAG');
+        //   commit('CLEAR_LOCK');
+        //   removeToken()
+        //   resolve()
+        // }).catch(error => {
+        //   reject(error)
+        // })
       })
     },
     //注销session
@@ -206,10 +216,10 @@ const user = {
     },
     GetTopMenu() {
       return new Promise(resolve => {
-        getTopMenu().then((res) => {
-          const data = res.data.data || []
-          resolve(data)
-        })
+        // getTopMenu().then((res) => {
+        //   const data = res.data.data || []
+        //   resolve(data)
+        // })
       })
     },
     //获取系统菜单
@@ -320,13 +330,15 @@ const user = {
               component: 'views/contact-us/companyInformation',
               icon: 'icon-caidan',
               children: []
-            }, {
-              label: "咨询合作",
-              path: 'refer',
-              component: 'views/contact-us/refer',
-              icon: 'icon-caidan',
-              children: []
-            },{
+            },
+            //   {
+            //   label: "咨询合作",
+            //   path: 'refer',
+            //   component: 'views/contact-us/refer',
+            //   icon: 'icon-caidan',
+            //   children: []
+            // },
+              {
               label: "留言列表",
               path: 'messageList.js',
               component: 'views/contact-us/messageList',

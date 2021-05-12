@@ -104,13 +104,15 @@ const first = [
       component: 'views/contact-us/companyInformation',
       icon: 'icon-caidan',
       children: []
-    }, {
-      label: "咨询合作",
-      path: 'refer',
-      component: 'views/contact-us/refer',
-      icon: 'icon-caidan',
-      children: []
-    },{
+    },
+    //   {
+    //   label: "咨询合作",
+    //   path: 'refer',
+    //   component: 'views/contact-us/refer',
+    //   icon: 'icon-caidan',
+    //   children: []
+    // }
+    ,{
         label: "留言列表",
         path: 'messageList.js',
         component: 'views/contact-us/messageList',

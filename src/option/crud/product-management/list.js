@@ -51,8 +51,10 @@ export default () => {
       {
         label: "产品分类",
         prop: "typeId",
-        hide: false,
+        // hide: true,
         value:　1,
+        // addDisplay: false,
+        // editDisplay: false
       },
       {
         label: "状态",
@@ -76,7 +78,7 @@ export default () => {
       {
         label: "产品介绍",
         prop: "detail",
-        type: 'textarea',
+        type: 'ueditor',
         hide: true,
         span: 24,
         options: {

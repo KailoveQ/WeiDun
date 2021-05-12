@@ -18,7 +18,8 @@ export default () => {
         label: "ID",
         prop: "id",
         addDisplay: false,
-        hide: true
+        hide: true,
+        editDisplay: false
       },
       {
         label: "图片",
@@ -51,9 +52,11 @@ export default () => {
       {
         label: "新闻分类",
         prop: "typeId",
-        hide: false,
+        hide: true,
         value:　1,
         row: true,
+        addDisplay: false,
+        editDisplay: false
       },
       {
         label: "新闻分类名称",
@@ -61,7 +64,9 @@ export default () => {
         row: true,
         hide: true,
         value:　1,
-        addDisplay: false
+        addDisplay: false,
+        editDisplay: false
+        // editDisplay: false
       },
       {
         label: "状态",
@@ -79,10 +84,18 @@ export default () => {
         }],
       },
       {
+        label: "发布日期",
+        prop: "publishdate",
+        // addDisplay: false,
+        // editDisplay: false,
+        hide: false
+      },
+      {
         label: "修改时间",
         prop: "updateTime",
         addDisplay: false,
-        hide: false
+        editDisplay: false,
+        hide: true
       },
       {
         label: "新闻简介",
@@ -91,18 +104,18 @@ export default () => {
         hide: true,
         row: true,
         span: 24,
-        rules: [
-          {
-            required: true,
-            message: "请输入新闻简介",
-            trigger: "blur",
-          },
-        ]
+        // rules: [
+        //   {
+        //     required: true,
+        //     message: "请输入新闻简介",
+        //     trigger: "blur",
+        //   },
+        // ]
       },
       {
         label: "新闻介绍",
         prop: "detail",
-        type: 'textarea',
+        type: 'ueditor',
         hide: true,
         row: true,
         span: 24,

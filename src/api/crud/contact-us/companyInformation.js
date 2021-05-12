@@ -18,5 +18,7 @@ export const update = (data) => request({  //修改数据
     type: 1,
     networkId: 1
   },
-  data: data
+  data: {
+    ...data,id:1
+  }
 })

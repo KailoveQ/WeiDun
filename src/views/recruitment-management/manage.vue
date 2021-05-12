@@ -3,16 +3,16 @@
     <avue-crud v-bind="bindVal" v-on="onEvent" v-model="form" :page.sync="page">
 
 
-      <template slot="menuLeft">
-        <el-button
-            type="primary"
-            icon="el-icon-download"
-            size="small"
-            plain
-            @click="handleExportExcel"
-        >导 出
-        </el-button>
-      </template>
+<!--      <template slot="menuLeft">-->
+<!--        <el-button-->
+<!--            type="primary"-->
+<!--            icon="el-icon-download"-->
+<!--            size="small"-->
+<!--            plain-->
+<!--            @click="handleExportExcel"-->
+<!--        >导 出-->
+<!--        </el-button>-->
+<!--      </template>-->
 
       <template slot-scope="{ type, size, row }" slot="menu">
         {{status}}

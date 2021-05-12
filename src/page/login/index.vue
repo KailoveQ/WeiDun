@@ -22,16 +22,16 @@
           <codeLogin v-else-if="activeName==='code'"></codeLogin>
           <thirdLogin v-else-if="activeName==='third'"></thirdLogin>
           <faceLogin v-else-if="activeName==='face'"></faceLogin>
-          <div class="login-menu">
-            <a href="#"
-               @click.stop="activeName='user'">{{ $t('login.userLogin') }}</a>
-            <a href="#"
-               @click.stop="activeName='code'">{{ $t('login.phoneLogin') }}</a>
-            <a href="#"
-               @click.stop="activeName='face'">{{ $t('login.faceLogin') }}</a>
-            <a href="#"
-               @click.stop="activeName='third'">{{ $t('login.thirdLogin') }}</a>
-          </div>
+<!--          <div class="login-menu">-->
+<!--            <a href="#"-->
+<!--               @click.stop="activeName='user'">{{ $t('login.userLogin') }}</a>-->
+<!--            <a href="#"-->
+<!--               @click.stop="activeName='code'">{{ $t('login.phoneLogin') }}</a>-->
+<!--            <a href="#"-->
+<!--               @click.stop="activeName='face'">{{ $t('login.faceLogin') }}</a>-->
+<!--            <a href="#"-->
+<!--               @click.stop="activeName='third'">{{ $t('login.thirdLogin') }}</a>-->
+<!--          </div>-->
         </div>
 
       </div>
@@ -103,5 +103,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/login.scss";
+//@import "@/styles/login.scss";
 </style>

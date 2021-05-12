@@ -40,9 +40,10 @@ export default {
         stripe: true,
         column: [
           {
-            label: "联系id",
+            label: "公司id",
             prop: "id",
             row: true,
+            disabled: true,
           },
           {
             label: "公司名称",
@@ -74,13 +75,13 @@ export default {
             label: "邮箱",
             prop: "email",
             row: true,
-            rules: [
-              {
-                required: true,
-                message: "请输入 邮箱",
-                trigger: "blur",
-              },
-            ],
+            // rules: [
+            //   {
+            //     required: true,
+            //     message: "请输入 邮箱",
+            //     trigger: "blur",
+            //   },
+            // ],
           },
           {
             label: "地址",

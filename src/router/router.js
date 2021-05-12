@@ -16,7 +16,7 @@ import Store from '../store/';
 Vue.use(VueRouter)
 //创建路由
 export const createRouter = () => new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: [...PageRouter, ...ViewsRouter]
 })
 const Router = createRouter()
