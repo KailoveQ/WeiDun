@@ -1,40 +1,38 @@
 import Mock from 'mockjs'
 const top = []
 const first = [
-  // {
-  //   label: "栏目管理",
-  //   path: '/column-management',
-  //   meta: {
-  //   },
-  //   component: 'views/column-management/index',
-  //   icon: 'icon-caidan',
-  //   children: [],
-  // },
   {
-    label: "公司信息",
+    label: "图片设置",
     path: '/company-information',
     meta: {
     },
     icon: 'icon-caidan',
     children: [{
-      label: "基础信息",
-      path: 'intro',
-      component: 'views/company-information/intro',
+      label: "资质与合作",
+      path: 'certificate',
+      component: 'views/company-information/certificate',
       icon: 'icon-caidan',
       children: []
     }, {
-        label: "资质证书",
-        path: 'certificate',
-        component: 'views/company-information/certificate',
-        icon: 'icon-caidan',
-        children: []
+      label: "宣传片",
+      path: 'promotionalVideo',
+      component: 'views/company-information/promotionalVideo',
+      icon: 'icon-caidan',
+      children: []
     }, {
-        label: "宣传片",
-        path: 'promotionalVideo',
-        component: 'views/company-information/promotionalVideo',
+      label: "轮播图",
+      path: 'imageEditor',
+      component: 'views/system-settings/imageEditor',
+      icon: 'icon-caidan',
+      children: []
+    },
+      {
+        label: "其他图片",
+        path: 'othersImageEditor',
+        component: 'views/system-settings/othersImageEditor',
         icon: 'icon-caidan',
         children: []
-    }]
+      },]
   },
   {
     label: "产品管理",
@@ -50,20 +48,6 @@ const first = [
       children: []
     }]
   },
-  // {
-  //   label: "案例管理",
-  //   path: '/case-management',
-  //   meta: {
-  //   },
-  //   icon: 'icon-caidan',
-  //   children: [{
-  //     label: "案例列表",
-  //     path: 'list',
-  //     component: 'views/case-management/list',
-  //     icon: 'icon-caidan',
-  //     children: []
-  //   },]
-  // },
   {
     label: "新闻管理",
     path: '/news-management',
@@ -78,20 +62,6 @@ const first = [
       children: []
     },]
   },
-  // {
-  //   label: "招聘管理",
-  //   path: '/recruitment-management',
-  //   meta: {
-  //   },
-  //   icon: 'icon-caidan',
-  //   children: [{
-  //     label: "岗位管理",
-  //     path: 'manage',
-  //     component: 'views/recruitment-management/manage',
-  //     icon: 'icon-caidan',
-  //     children: []
-  //   },]
-  // },
   {
     label: "联系我们",
     path: '/contact-us',
@@ -105,14 +75,7 @@ const first = [
       icon: 'icon-caidan',
       children: []
     },
-    //   {
-    //   label: "咨询合作",
-    //   path: 'refer',
-    //   component: 'views/contact-us/refer',
-    //   icon: 'icon-caidan',
-    //   children: []
-    // }
-    ,{
+      {
         label: "留言列表",
         path: 'messageList.js',
         component: 'views/contact-us/messageList',
@@ -126,25 +89,21 @@ const first = [
     meta: {
     },
     icon: 'icon-caidan',
-    children: [{
-      label: "基础设置",
-      path: 'basics',
-      component: 'views/system-settings/basics',
-      icon: 'icon-caidan',
-      children: []
-    }, {
-      label: "轮播图修改",
-      path: 'imageEditor',
-      component: 'views/system-settings/imageEditor',
-      icon: 'icon-caidan',
-      children: []
-    },{
-      label: "其他图片修改",
-      path: 'othersImageEditor',
-      component: 'views/system-settings/othersImageEditor',
-      icon: 'icon-caidan',
-      children: []
-    },]
+    children: [
+      {
+        label: "公司信息",
+        path: 'intro',
+        component: 'views/company-information/intro',
+        icon: 'icon-caidan',
+        children: []
+      },
+      {
+        label: "网站信息",
+        path: 'basics',
+        component: 'views/system-settings/basics',
+        icon: 'icon-caidan',
+        children: []
+      }]
   },
 ]
 const second = []

@@ -39,22 +39,22 @@ export default {
         stripe: true,
         hide: true,
         column: [
-          {
-            label: "网站id",
-            prop: "id",
-            type: "number",
-            disabled: true,
-            value: 1,
-            row: true,
-            rows: "10",
-            rules: [
-              {
-                required: true,
-                message: "请输入网站id",
-                trigger: "blur",
-              },
-            ],
-          },
+          // {
+          //   label: "网站id",
+          //   prop: "id",
+          //   type: "number",
+          //   disabled: true,
+          //   value: 1,
+          //   row: true,
+          //   rows: "10",
+          //   rules: [
+          //     {
+          //       required: true,
+          //       message: "请输入网站id",
+          //       trigger: "blur",
+          //     },
+          //   ],
+          // },
           {
             label: "公司概况",
             prop: "profile",

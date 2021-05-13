@@ -227,29 +227,14 @@ const user = {
       return new Promise(resolve => {
         let menu = [
           /* eslint-disable */
-          // {
-          //   label: "栏目管理",
-          //   path: '/column-management',
-          //   meta: {
-          //   },
-          //   component: 'views/column-management/index',
-          //   icon: 'icon-caidan',
-          //   children: [],
-          // },
           {
-            label: "公司信息",
+            label: "图片设置",
             path: '/company-information',
             meta: {
             },
             icon: 'icon-caidan',
             children: [{
-              label: "基础信息",
-              path: 'intro',
-              component: 'views/company-information/intro',
-              icon: 'icon-caidan',
-              children: []
-            }, {
-              label: "资质证书",
+              label: "资质与合作",
               path: 'certificate',
               component: 'views/company-information/certificate',
               icon: 'icon-caidan',
@@ -260,7 +245,20 @@ const user = {
               component: 'views/company-information/promotionalVideo',
               icon: 'icon-caidan',
               children: []
-            }]
+            }, {
+              label: "轮播图",
+              path: 'imageEditor',
+              component: 'views/system-settings/imageEditor',
+              icon: 'icon-caidan',
+              children: []
+            },
+              {
+                label: "其他图片",
+                path: 'othersImageEditor',
+                component: 'views/system-settings/othersImageEditor',
+                icon: 'icon-caidan',
+                children: []
+              },]
           },
           {
             label: "产品管理",
@@ -276,20 +274,6 @@ const user = {
               children: []
             }]
           },
-          // {
-          //   label: "案例管理",
-          //   path: '/case-management',
-          //   meta: {
-          //   },
-          //   icon: 'icon-caidan',
-          //   children: [{
-          //     label: "案例列表",
-          //     path: 'list',
-          //     component: 'views/case-management/list',
-          //     icon: 'icon-caidan',
-          //     children: []
-          //   },]
-          // },
           {
             label: "新闻管理",
             path: '/news-management',
@@ -304,20 +288,6 @@ const user = {
               children: []
             },]
           },
-          // {
-          //   label: "招聘管理",
-          //   path: '/recruitment-management',
-          //   meta: {
-          //   },
-          //   icon: 'icon-caidan',
-          //   children: [{
-          //     label: "岗位管理",
-          //     path: 'manage',
-          //     component: 'views/recruitment-management/manage',
-          //     icon: 'icon-caidan',
-          //     children: []
-          //   },]
-          // },
           {
             label: "联系我们",
             path: '/contact-us',
@@ -331,13 +301,6 @@ const user = {
               icon: 'icon-caidan',
               children: []
             },
-            //   {
-            //   label: "咨询合作",
-            //   path: 'refer',
-            //   component: 'views/contact-us/refer',
-            //   icon: 'icon-caidan',
-            //   children: []
-            // },
               {
               label: "留言列表",
               path: 'messageList.js',
@@ -352,26 +315,21 @@ const user = {
             meta: {
             },
             icon: 'icon-caidan',
-            children: [{
-              label: "基础设置",
+            children: [
+              {
+                label: "公司信息",
+                path: 'intro',
+                component: 'views/company-information/intro',
+                icon: 'icon-caidan',
+                children: []
+              },
+              {
+              label: "网站信息",
               path: 'basics',
               component: 'views/system-settings/basics',
               icon: 'icon-caidan',
               children: []
-            }, {
-              label: "轮播图修改",
-              path: 'imageEditor',
-              component: 'views/system-settings/imageEditor',
-              icon: 'icon-caidan',
-              children: []
-            },
-              {
-                label: "其他图片修改",
-                path: 'othersImageEditor',
-                component: 'views/system-settings/othersImageEditor',
-                icon: 'icon-caidan',
-                children: []
-              },]
+            }]
           },
 
 
