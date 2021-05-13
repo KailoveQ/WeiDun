@@ -53,25 +53,10 @@ export default {
             ],
           },
           {
-            label: "联系方式一",
+            label: "联系电话",
             prop: "phone",
             row: true,
-            value: '我是电话号码1',
-            // type: "string",
-            // rules: [
-            //   {
-            //     required: true,
-            //     message: "请输入 联系电话",
-            //     trigger: "blur",
-            //   },
-            // ],
-          },
-          {
-            label: "联系方式二",
-            prop: "mobile",
-            row: true,
-            value: '我是电话号码2',
-            // type: "string",
+            value: '我是电话号码',
           },
           {
             label: "邮箱",

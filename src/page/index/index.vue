@@ -81,7 +81,7 @@ export default {
   },
   created () {
     //实时检测刷新token
-    this.refreshToken();
+    // this.refreshToken();
   },
   mounted () {
     this.init();

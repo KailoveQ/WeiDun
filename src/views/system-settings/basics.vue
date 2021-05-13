@@ -151,16 +151,14 @@ export default {
           //   row: true,
           // },
           {
-            label: "联系电话",
+            label: "联系电话一",
             prop: "phone",
             row: true,
-            rules: [
-              {
-                required: true,
-                message: "请输入 联系电话",
-                trigger: "blur",
-              },
-            ],
+          },
+          {
+            label: "联系电话二",
+            prop: "mobile",
+            row: true,
           },
           {
             label: "网站 二维码",

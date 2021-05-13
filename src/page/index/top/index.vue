@@ -27,14 +27,14 @@
           <top-color></top-color>
         </div>
       </el-tooltip>
-      <el-tooltip v-if="showDebug"
-                  effect="dark"
-                  :content="logsFlag?$t('navbar.bug'):logsLen+$t('navbar.bugs')"
-                  placement="bottom">
-        <div class="top-bar__item">
-          <top-logs></top-logs>
-        </div>
-      </el-tooltip>
+<!--      <el-tooltip v-if="showDebug"-->
+<!--                  effect="dark"-->
+<!--                  :content="logsFlag?$t('navbar.bug'):logsLen+$t('navbar.bugs')"-->
+<!--                  placement="bottom">-->
+<!--        <div class="top-bar__item">-->
+<!--          <top-logs></top-logs>-->
+<!--        </div>-->
+<!--      </el-tooltip>-->
       <el-tooltip v-if="showLock"
                   effect="dark"
                   :content="$t('navbar.lock')"
