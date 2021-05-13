@@ -86,9 +86,13 @@ export default () => {
       {
         label: "发布日期",
         prop: "publishdate",
+        row: true,
         // addDisplay: false,
         // editDisplay: false,
-        hide: false
+        hide: false,
+        type: "date",
+        format: "yyyy-MM-dd hh:mm:ss",
+        valueFormat: "yyyy-MM-dd hh:mm:ss",
       },
       {
         label: "修改时间",
