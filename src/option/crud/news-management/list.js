@@ -71,7 +71,7 @@ export default () => {
       {
         label: "状态",
         prop: "status",
-        row: true,
+        // row: true,
         hide: false,
         type: 'select',
         value: 0,
@@ -86,13 +86,27 @@ export default () => {
       {
         label: "发布日期",
         prop: "publishdate",
-        row: true,
+        // row: true,
         // addDisplay: false,
         // editDisplay: false,
         hide: false,
         type: "date",
         format: "yyyy-MM-dd hh:mm:ss",
         valueFormat: "yyyy-MM-dd hh:mm:ss",
+      },
+      {
+        label: "排序",
+        prop: "sort",
+        // hide: "true",
+        type: 'number',
+        width: 60,
+        rules: [
+          {
+            required: true,
+            message: "请输入排序信息",
+            trigger: "blur",
+          },
+        ]
       },
       {
         label: "修改时间",
