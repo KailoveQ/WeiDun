@@ -62,7 +62,13 @@ export default window.$crudCommon(
         listAfter(data){
           data.records.map(item=>{
             item.status=item.status.code
+            console.log(item.detail)
           })
+        },
+        updateBefore(data){
+          console.log('xxx')
+          // this.from.detail.replace
+          console.log(this.form.detail)
         },
         handleBtnClick(type, row) {
           // console.log(`${type},${row}`)
@@ -95,7 +101,6 @@ export default window.$crudCommon(
       pageSize: "pageSize", //页数
       res: (data) => {
         return data.data;
-
       }, //列表的结构
       total: "total", //总页数
       data: "records", //列表属性

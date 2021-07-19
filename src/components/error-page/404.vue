@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: "error-404"
+  name: "error-404",
+  created() {
+    this.$router.push({ path: "/" });
+  },
 };
 </script>
 <style lang="scss" scoped>
