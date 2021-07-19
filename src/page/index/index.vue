@@ -15,7 +15,7 @@
       <div class="avue-main"
            :class="{'avue-main--fullscreen':!isMenu}">
         <!-- 顶部标签卡 -->
-        <tags />
+<!--        <tags />-->
         <transition name="fade-scale">
           <search class="avue-view"
                   v-show="isSearch"></search>

@@ -314,7 +314,7 @@ const user = {
             path: '/system-settings',
             meta: {
             },
-            icon: 'icon-caidan',
+            icon: 'el-icon-setting',
             children: [
               {
                 label: "公司信息",

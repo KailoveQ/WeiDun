@@ -47,23 +47,23 @@ export default {
       })
     },
 
-    // handleDownloadTemplate() {
-    //   const url = this.templateUrl
-    //   if (!url) {
-    //     this.$message({
-    //       message: 'no exportExcelUrl',
-    //       type: 'error',
-    //     });
-    //     return
-    //   }
-    //   downloadImportTemplate(url).then(({ data }) => {
-    //     this.downloadFile(data)
-    //   })
-    // },
-    // downloadFile(fileName) {
-    //   const href = `${baseUrl}/common/download?fileName=${fileName}&Authorization=${this.$store.getters.token}&delete=true`; // 创建下载的链接
-    //   window.location.href = href;
-    // }
+    handleDownloadTemplate() {
+      const url = this.templateUrl
+      if (!url) {
+        this.$message({
+          message: 'no exportExcelUrl',
+          type: 'error',
+        });
+        return
+      }
+      downloadImportTemplate(url).then(({ data }) => {
+        this.downloadFile(data)
+      })
+    },
+    downloadFile(fileName) {
+      const href = `${baseUrl}/common/download?fileName=${fileName}&Authorization=${this.$store.getters.token}&delete=true`; // 创建下载的链接
+      window.location.href = href;
+    }
   },
 
 

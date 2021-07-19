@@ -13,6 +13,7 @@ export default () => {
     border: true,
     stripe: true,
     searchShow: false,
+    updateBtnText:'保存',
     column: [
       {
         label: "ID",
