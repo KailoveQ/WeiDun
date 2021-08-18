@@ -15,6 +15,11 @@ export const del = (id) => request({
   data: [id],
 })
 
+// export const add = (data) => request({
+//   url: `${apiUrl}/save/1`,
+//   method: 'post',
+//   data: data,
+// })
 export const add = (data) => request({
   url: `${apiUrl}/1`,
   method: 'put',
