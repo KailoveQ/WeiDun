@@ -48,12 +48,11 @@ export default () => {
         row: "true"
         // addDisplay: false,
         // editDisplay: false
-
       },
       {
         label: "类型",
         prop: "type",
-        value: "视频类型",
+        value: 2,
         type: 'select',
         dicData: [{
           label: "视频类型",

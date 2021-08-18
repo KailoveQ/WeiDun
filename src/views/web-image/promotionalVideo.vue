@@ -1,6 +1,6 @@
 <template>
   <basic-container>
-    <avue-crud v-bind="bindVal" v-on="onEvent" v-model="form" :page.sync="page">
+    <avue-crud v-bind="bindVal" v-on="onEvent" v-model="form" :page.sync="page" :upload-after="uploadAfter" >
 
       <template slot-scope="{ type, size, row }" slot="menu">
         {{status}}
@@ -41,13 +41,18 @@ export default window.$crudCommon(
         // },
       },
       methods: {
+        uploadAfter(res, done, loading,column) {
+          console.log(res,column)
+          done()
+          this.$message.success('上传后的方法')
+        },
+
         listAfter(data){
           data.records.map(item=>{
             item.status=item.status.code
           })
         },
         handleBtnClick(type, row) {
-          // console.log(`${type},${row}`)
           switch (type) {
             case "updateStatus":
               // console.log(row)

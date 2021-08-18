@@ -139,7 +139,7 @@ export default () => {
         row: true,
         span: 24,
         options: {
-          action: baseUrl + "/upload/",
+          action: baseUrl + "/upload",
           props: {
             res:'data',
             url: "absolutePath"
